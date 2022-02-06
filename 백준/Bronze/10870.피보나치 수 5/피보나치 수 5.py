@@ -1,7 +1,7 @@
 import sys
 
 def fibo(n):
-    dic[str(n)]=dic.get(str(n-1)) + dic.get(str(n-2)) 
+    dic[str(n)]=dic.get(str(n-1)) + dic.get(str(n-2)) # 딕셔너리 값 불러오기 : .get('key')
 
 N = int(sys.stdin.readline())
 
