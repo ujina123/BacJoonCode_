@@ -11,9 +11,6 @@ def pop():
         print(res[-1])
         res.pop()
         
-def size():
-    print(len(res))
-
 def empty():
     if len(res) == 0:
         print(1)
@@ -26,18 +23,14 @@ def top():
     else: 
         print(res[-1])
 
-
 N = int(sys.stdin.readline())
 res = []
+
 for _ in range(N):
     func = sys.stdin.readline().strip()
     if func.find('push') == 0:
         push(func[4:])
-    elif func == 'pop':
-        pop()
-    elif func == 'top':
-        top()
-    elif func == 'size':
-        size()
-    elif func == 'empty':
-        empty()
+    elif func == 'pop': pop()
+    elif func == 'top': top()
+    elif func == 'size': print(len(res))
+    elif func == 'empty': empty()
