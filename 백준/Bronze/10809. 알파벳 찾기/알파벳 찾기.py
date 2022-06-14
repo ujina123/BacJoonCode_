@@ -1,13 +1,8 @@
-import sys
-S = list(sys.stdin.readline())
-
-AtoZ = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-
-res = []
-for i in AtoZ:
-    if i in S:
-        idx = S.index(i)
-        res.append(idx)
-    else:
-        res.append(-1)
-print(*res)
+S = list(input())
+b = [-1 for _ in range(26)]
+for i in S:
+    n = ord(i)-97
+    if b[n] != -1:
+        continue
+    b[n] = S.index(i)
+print(*b)
